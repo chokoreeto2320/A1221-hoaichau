@@ -9,17 +9,16 @@
 </head>
 
 <body>
+    <h2>javascript loops</h2>
+    <p id="demo"></p>
     <script>
-        let userName = prompt("Who's there?", '');
-        if (userName == 'Admin') {
-            alert('true');
-        } else if (userName == null) {
-            alert('Canceled');
-        } else {
-            alert("I don't know you");
-
+        let i;
+        for (i = 0; i < 5; i++) {
+            text += "the number is" + i + "<br>";
         }
+        document.getElementById("demo").innerHTML = text;
     </script>
+
 </body>
 
 </html>

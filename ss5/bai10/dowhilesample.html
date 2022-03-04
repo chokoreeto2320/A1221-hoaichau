@@ -10,15 +10,11 @@
 
 <body>
     <script>
-        let userName = prompt("Who's there?", '');
-        if (userName == 'Admin') {
-            alert('true');
-        } else if (userName == null) {
-            alert('Canceled');
-        } else {
-            alert("I don't know you");
-
-        }
+        let value = null;
+        do {
+            value = prompt("nhap so tu 1 den 10");
+        } while (value < 1 || value > 10);
+        alert("so vua nhap la:" + value);
     </script>
 </body>
 
