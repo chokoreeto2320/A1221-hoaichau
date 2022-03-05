@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = Number(prompt("Số lượng số nguyên tố cần in: "))
+        let result = "";
+        for (let i = 2; i < numbers; i++) {
+            let j = 2;
+            check = 1;
+            while (j < i) {
+                if (i % j == 0) {
+                    check = 0;
+                }
+                j++;
+            }
+            if (check == 1) result += i + " ";
+        }
+        console.log(result);
+    </script>
+</body>
+
+</html>

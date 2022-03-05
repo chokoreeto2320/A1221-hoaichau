@@ -15,7 +15,19 @@
         let index = -1;
 
         function convert() {
-            let words = document.getElementById
+            let words = document.getElementById("words").value;
+            for (let i = 0; i < english.length; i++) {
+                if (word === english[i]) {
+                    index = i;
+                    break;
+                }
+            }
+            if (index === -1) {
+                alert("khong tim thay tu");
+            } else {
+                alert("tu da duoc dich la: " + vietnamese[index]);
+
+            }
         }
     </script>
 </body>

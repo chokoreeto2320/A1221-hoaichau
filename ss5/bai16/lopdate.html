@@ -10,33 +10,44 @@
 
 <body>
     <script>
-        class MyDate {
-            constructor(day, month, year) {
-                this.day = day;
-                this.month = month;
-                this.year = year;
-            }
+        let MyDate = function(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
 
-            getDay() {
+            this.getDay = function() {
                 return this.day;
             }
-
-            getMonth() {
+            this.getMonth = function() {
                 return this.month;
             }
-            getYear() {
+            this.getYear = function() {
                 return this.year;
             }
 
-            setDay(day) {
+            this.setDay = function(day) {
                 this.day = day;
             }
+            this.setMonth = function(month) {
+                this.month = month;
+            }
+            this.setYear = function(year) {
+                this.year = year;
+            }
         }
+        let date = new MyDate(2, 2, 2007);
 
+        date.setDay(10);
+        date.setMonth(10);
+        date.setYear(2019);
 
+        let day = date.getDay();
 
-        let obj1 = new MyDate(21, 2, 2022);
-        console.log(obj1.getDay());
+        let month = date.getMonth();
+
+        let year = date.getYear();
+
+        alert(day + "/" + month + "/" + year);
     </script>
     <script></script>
 </body>

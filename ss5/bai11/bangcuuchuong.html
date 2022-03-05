@@ -10,17 +10,17 @@
 
 <body>
     <script>
-        function bangcuuchuong() {
-            document.write("<table border=1 width=100%>")
-            for (i = 1; i <= 9; i++) {
-                document.write("<tr>")
-                for (n = 2; n <= 9; n++)
-                    document.write("<td>" + n + "x" + i + "=" + (n * i));
-                document.write("</td>");
-                document.write("</tr>")
+        let sout;
+        sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+        for (i = 1; i <= 9; i++) {
+            sout = sout + "<tr>";
+            for (j = 2; j <= 9; j++) {
+                sout = sout + "<td>" + j + "x" + i + "=" + i * j + "</td>";
             }
-            document.write("</tr></table>")
+            sout = sout + "</tr>";
         }
+        sout = sout + "</table>";
+        document.write(sout);
     </script>
 </body>
 
