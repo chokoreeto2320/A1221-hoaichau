@@ -1,3 +1,0 @@
-function dientichhinhchunhat() {
-    var height = 
-}
