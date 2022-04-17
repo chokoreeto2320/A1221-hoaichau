@@ -1,7 +1,6 @@
 package ss8_cleancode.baitap.refactoring;
 
 
-import groovy.test.GroovyTestCase;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -72,6 +71,6 @@ public class TennisGameTest {
             if (i < this.playerSecond)
                 scorePlayerSecond += 1;
         }
-        GroovyTestCase.assertEquals(this.expectedScore, TennisGame.getScore("John", "Bill", scorePlayerFirst, scorePlayerSecond));
+        assertEquals(this.expectedScore, TennisGame.getScore("John", "Bill", scorePlayerFirst, scorePlayerSecond));
     }
 }
