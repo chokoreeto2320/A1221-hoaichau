@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+
+<body>
+    <script>
+        function main() {
+            let words = prompt("Nhập chuỗi kí tự:");
+            document.write("Chuỗi trước khi chuẩn hóa: " + words + "<br>")
+            let newwords = words.toLowerCase().split(" ")
+            array = []
+            for (let i = 0; i < newwords.length; i++) {
+                if (newwords[i] != "") {
+                    array.push(newwords[i])
+                }
+            }
+            let max = 0;
+            let string;
+            for (let i = 0; i < array.length; i++) {
+                array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1)
+                if (array[i].length > max) {
+                    string = array[i];
+                    max = array[i].length
+                }
+            }
+            document.write("Chuỗi sau khi chuẩn hóa: " + array.join(" ") + "<br>")
+            document.write("Từ dài nhất trong chuỗi là: " + string)
+        }
+        main()
+            //cách 2:
+        let words = prompt("mời nhập từ").toLowerCase().split(" ");
+        document.writeln(words + "<br>")
+        for (let i = 0; i < words.length; i++) {
+            if (words[i] == "") {
+                words.splice(i, 1)
+                i--
+            } else {
+                words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1)
+            }
+        }
+        document.writeln("sau thay đổi:" + words.join("&nbsp"))
+    </script>
+</body>
+
+</html>

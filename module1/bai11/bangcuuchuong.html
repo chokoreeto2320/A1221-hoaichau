@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sout;
+        sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+        for (i = 1; i <= 9; i++) {
+            sout = sout + "<tr>";
+            for (j = 2; j <= 9; j++) {
+                sout = sout + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+            }
+            sout = sout + "</tr>";
+        }
+        sout = sout + "</table>";
+        document.write(sout);
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sinh bảng cửu chương</title>
+</head>
+
+<body>
+    <script>
+        var hangcot;
+        hangcot = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+        for (let i = 1; i <= 9; i++) {
+            hangcot = hangcot + "<tr>";
+            for (j = 2; j <= 9; j++) {
+                hangcot = hangcot + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+            }
+            /*j=2;*/
+            hangcot = hangcot + "</tr>"
+        }
+        hangcot = hangcot + "</table>";
+        document.write(hangcot)
+    </script>
+
+</body>
+
+</html>

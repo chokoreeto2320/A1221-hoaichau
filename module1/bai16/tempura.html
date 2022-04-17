@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        class Temperature {
+            constructor(celsius) {
+                this.celsius = celsius;
+            }
+            convertF() {
+                return ((this.celsius * 9) / 5) + 32;
+            }
+            convertK() {
+                return this.celsius + 273.15;
+            }
+        }
+        /*    function Temperature(celsius){
+                this.celsius=celsius
+                this.convertF=function (){
+                    return ((this.celsius*9)/5)+32
+                }
+                this.convertK=function (){
+                    return this.celsius+273.15
+                }
+            }*/
+        function main() {
+            var celsius = Number(prompt("Mời bạn nhập độ C"))
+            temperature = new Temperature(celsius)
+            document.getElementById('result').innerHTML = celsius + "°C =" + temperature.convertF() + "°F và " + temperature.convertK() + "°K"
+
+        }
+        main()
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h2>Chuyển đổi foot sang meter hoặc meter sang foot</h2>
+    <p>
+        <input id="giatri" type="number" />
+        <button onclick="footToMeter()">Foot-To-Meter</button>
+        <button onclick="meterToFoot()">Meter-To-Foot</button>
+    </p>
+    <p>Kết quả: <span id="result"></span></p>
+    <script>
+        function footToMeter() {
+
+            let giatri = Number(document.getElementById("giatri").value);
+
+            meter = 0.305 * giatri
+            document.getElementById('result').innerHTML = giatri + " foot chuyển sang meter là " + meter + " meter";
+        }
+
+        function meterToFoot() {
+            let giatri = Number(document.getElementById("giatri").value);
+
+            foot = 3.279 * giatri;
+            document.getElementById('result').innerHTML = giatri + " meter chuyển sang foot = " + foot + " foot";
+        }
+    </script>
+</body>
+
+</html>

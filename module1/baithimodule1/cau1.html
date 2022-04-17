@@ -1,0 +1,46 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+
+<body>
+    <script>
+        let number = Number(prompt('Nhập số phần tử của mảng: '));
+        while (number <= 50) {
+            let arrayA = new Array(number);
+            for (let i = 0; i < arrayA.length; i++) {
+                arrayA[i] = prompt('Phần tử ' + i + ' của mảng có giá trị là: ');
+            }
+            let arrayB = [];
+            document.write('Mảng a:');
+            document.write("<br>");
+            document.write(arrayA);
+            document.write("<br>");
+
+            function isPrime(a) {
+                let result = true;
+                for (let i = 2; i < a; i++) {
+                    if (a % i == 0) {
+                        result = false;
+                        break;
+                    }
+                }
+                return result;
+            }
+            for (let i = 0; i < arrayA.length; i++) {
+                if (isPrime(arrayA[i]) === true) {
+                    arrayB.push(arrayA[i]);
+                }
+            }
+            document.write('Mảng b:');
+            document.write("<br>");
+            document.write(arrayB);
+        }
+    </script>
+</body>
+
+</html>

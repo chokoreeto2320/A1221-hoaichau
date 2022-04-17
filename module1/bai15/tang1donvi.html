@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <input id="value" type="number" oninput="plusone(Number(this.value))"><span> Giá trị này sau khi tăng 1 đơn vị là: </span><b><span id="result" style="color: red"></span></b>
+    <script>
+        function plusone(number) {
+            document.getElementById("result").innerHTML = number + 1
+        }
+    </script>
+</body>
+
+</html>

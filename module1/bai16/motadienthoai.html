@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <script>
+        class Mobile {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+                this.battery = 100;
+                this.memoryArea2 = "";
+                this.memoryArea3 = "";
+                this.memoryArea1 = "";
+                this.status = false;
+            }
+
+            checkStatus() {
+                if (this.status) {
+                    alert("Điện thoại " + this.name + " đang bật")
+                } else {
+                    alert("Điện thoại " + this.name + " đang tắt")
+                }
+            }
+
+            createMessage() {
+                if ((this.status) && (this.battery > 0)) {
+                    this.memoryArea1 = prompt("Message:");
+                    this.battery--
+                }
+            }
+
+            turnOn() {
+                if (this.battery > 0) {
+                    this.status = true;
+                    this.battery--
+                }
+            }
+
+            turnOff() {
+                if (this.status) {
+                    this.status = false;
+                    this.battery--
+                }
+            }
+
+            charge() {
+                if ((this.status) && this.battery <= 100) {
+                    this.battery++
+                }
+            }
+            getMessage(message) {
+                if (this.status && (this.battery > 0)) {
+                    this.memoryArea2 = message
+                    this.battery--
+                }
+            }
+            sendMessage(mobile) {
+                if (this.status && (this.battery > 0)) {
+                    this.createMessage()
+                    this.memoryArea3 = this.memoryArea1
+                    mobile.getMessage(this.memoryArea3)
+                    this.battery--
+                }
+            }
+            viewMessageIn() {
+                if (this.status && (this.battery > 0)) {
+                    console.log(this.memoryArea2)
+                    this.battery--
+                }
+            }
+            viewMessageOut() {
+                if (this.status && (this.battery > 0)) {
+                    console.log(this.memoryArea3)
+                    this.battery--
+                }
+            }
+        }
+
+
+        let nokia = new Mobile(1, "nokia");
+        nokia.turnOn()
+        let iphone = new Mobile(2, "iphone");
+        iphone.turnOn()
+        nokia.checkStatus();
+        iphone.checkStatus();
+
+        nokia.sendMessage(iphone)
+
+        iphone.viewMessageIn()
+        nokia.viewMessageOut()
+    </script>
+</body>
+
+</html>
