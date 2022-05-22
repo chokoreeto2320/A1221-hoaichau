@@ -1,2 +1,4 @@
-package mobile_manager.utils;public class FileHelper {
+package mobile_manager.utils;
+
+public class FileHelper {
 }

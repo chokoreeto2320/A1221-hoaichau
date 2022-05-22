@@ -1,2 +1,5 @@
-package utils;public class ConstantUtlis {
+package utils;
+
+public interface ConstantUtlis {
+    String path ="src/datacsv/sanpham.csv";
 }

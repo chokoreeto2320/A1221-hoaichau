@@ -1,21 +1,21 @@
 package Model;
 
-public class NhapKhau extends SanPham{
+public class SanPhamNhapKhau extends SanPham{
     private double giaNhapKhau;
     private String thanhPho;
     private double thue;
 
-    public NhapKhau(){
+    public SanPhamNhapKhau(int thue){
 
     }
 
-    public NhapKhau(double giaNhapKhau, String thanhPho, double thue) {
+    public SanPhamNhapKhau(double giaNhapKhau, String thanhPho, double thue) {
         this.giaNhapKhau = giaNhapKhau;
         this.thanhPho = thanhPho;
         this.thue = thue;
     }
 
-    public NhapKhau(int id, String ten, double gia, String nhaSanXuat, int data, int soLuong, double giaNhapKhau, String thanhPho, double thue) {
+    public SanPhamNhapKhau(int id, String ten, double gia, String nhaSanXuat, int data, int soLuong, double giaNhapKhau, String thanhPho, double thue) {
         super(id, ten, gia, nhaSanXuat, data, soLuong);
         this.giaNhapKhau = giaNhapKhau;
         this.thanhPho = thanhPho;

@@ -1,2 +1,4 @@
-package case_study.Furuma_resort.models;public class Booking {
+package case_study.Furuma_resort.models;
+
+public class Booking {
 }

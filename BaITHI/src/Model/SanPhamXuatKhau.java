@@ -1,21 +1,25 @@
 package Model;
 
-public class XuatKhau extends SanPham {
+public class SanPhamXuatKhau extends SanPham {
     private double giaXuatKhau;
     private String quocGia;
 
-    public XuatKhau(){}
+    public SanPhamXuatKhau(int i, String name, Double price, String manufacturer, String country, String status){}
 
-    public XuatKhau(double giaXuatKhau, String quocGia) {
+    public SanPhamXuatKhau(double giaXuatKhau, String quocGia) {
         this.giaXuatKhau = giaXuatKhau;
         this.quocGia = quocGia;
     }
 
-    public XuatKhau(int id, String ten, double gia, String nhaSanXuat, int data, int soLuong, double giaXuatKhau, String quocGia) {
+    public SanPhamXuatKhau(int id, String ten, double gia, String nhaSanXuat, int data, int soLuong, double giaXuatKhau, String quocGia) {
         super(id, ten, gia, nhaSanXuat, data, soLuong);
         this.giaXuatKhau = giaXuatKhau;
         this.quocGia = quocGia;
     }
+
+    public SanPhamXuatKhau(String giaXuatKhau, String quocGia) {
+    }
+
 
     public double getGiaXuatKhau() {
         return giaXuatKhau;

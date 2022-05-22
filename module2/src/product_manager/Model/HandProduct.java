@@ -1,20 +1,23 @@
 package product_manager.Model;
 
-public class HandcarrieProduct extends Product{
+public class HandProduct extends Product{
     private String country;
     private String state;
 
-    public HandcarrieProduct(){}
+    public HandProduct(){}
 
-    public HandcarrieProduct(String country, String state) {
+    public HandProduct(String country, String state) {
         this.country = country;
         this.state = state;
     }
 
-    public HandcarrieProduct(int iD, String name, int price, String manufacturer, String country, String state) {
+    public HandProduct(int iD, String name, int price, String manufacturer, String country, String state) {
         super(iD, name, price, manufacturer);
         this.country = country;
         this.state = state;
+    }
+
+    public HandProduct(int iD, String name, Double price, String manufacturer, String country, String state) {
     }
 
     public String getCountry() {
@@ -35,7 +38,7 @@ public class HandcarrieProduct extends Product{
 
     @Override
     public String toString() {
-        return "HandcarrieProduct{" +
+        return "HandProduct{" +
                 "country='" + country + '\'' +
                 ", state='" + state + '\'' +
                 '}';

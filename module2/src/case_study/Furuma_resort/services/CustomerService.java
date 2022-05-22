@@ -1,2 +1,4 @@
-package case_study.Furuma_resort.services;public interface CustomerService {
+package case_study.Furuma_resort.services;
+
+public interface CustomerService extends Service{
 }
