@@ -1,40 +1,56 @@
+create database quanlybanhang;
 
-CREATE DATABASE if not exists quan_ly_sinh_vien;
-
-CREATE TABLE class(
-ClassID INT primary key,
-ClassName VARCHAR(60),
-StartDate DATETIME,
-Status BIT
+create table PHIEUXUAT(
+	SoPX int primary key,
+	NgayXuat datetime
 );
 
-
-CREATE TABLE Student (
-StudentId INT primary key,
-StudentName VARCHAR(30),
-Address VARCHAR(50),
-Phone VARCHAR(20),
-`Status` BIT,
-ClassId INT,
-FOREIGN KEY (ClassId) REFERENCES Class (ClassID)
+create table phieuxuat_vattu(
+	DGXuat int,
+    SLxuat int,
+    SoPX int,
+    MaVTU int,
+    primary key(SoPX, MaVTU),
+    foreign key (SoPX) references PHIEUXUAT(SoPX),
+    foreign key (MaVTU) references VATTU(MaVTU)
 );
 
-
-CREATE TABLE Subject(
-SubId int  primary key,
-SubName varchar(30),
-Credit tinyint ,
-`Status` bit
+create table VATTU(
+	MaVTU int primary key,
+    TenVTU varchar(50) 
 );
 
-CREATE TABLE Mark(
-MarkId int primary key ,
-SubId int,
-StudentId int,
-Mark float,
-ExamTimes tinyint,
-UNIQUE (SubId,StudentId ),
-FOREIGN KEY (SubId) REFERENCES Subject(SubId),
-FOREIGN KEY (StudentId) REFERENCES Student(StudentId)
+create table vattu_phieunhap(
+	MaVTU int,
+    SoPN int,
+    DGNhap int,
+    SLNhap int,
+    primary key(MaVTU, SoPN),
+    foreign key (MaVTU) references VATTU(MaVTU),
+    foreign key (SoPN) references PHIEUNHAP(SoPN)
+);
 
+create table PHIEUNHAP(
+	SoPN int primary key,
+    NgayNhap datetime
+);
+create table vattu_dondh(
+    MaVTU int,
+    SoDH int,
+    primary key(MaVTU, SoDH),
+    foreign key (MaVTU) references VATTU(MaVTU),
+    foreign key (SoDH) references DONDH(SoDH)
+);
+create table DONDH(
+	SoDH int primary key,
+	NgayDH datetime
+);
+
+create table NHACC(
+	MaNCC int primary key,
+	TenNCC varchar(50),
+	DiaChi varchar(50),
+    SDT int,
+    SoDH int,
+    foreign key (SoDH) references DONDH(SoDH)
 );
